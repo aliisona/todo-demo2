@@ -9,13 +9,23 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        VStack { //vertical stack
+            HStack { //horizontal stack
+                Text("To Do List")
+                    .font(.system(size:40))
+                    .fontWeight(.black)
+                Spacer()
+                //anything in the curly bracket is the action
+                Button(action: {
+                //action will go here, but not here yet
+                }) {
+                    Text("+")
+                        .font(.system(size:40))
+                        .fontWeight(.black)
+                }
+            }
+            .padding() //makes to do list on the side because it adds padding to the hstack (note the closing bracket on line 19)
         }
-        .padding()
     }
 }
 
